@@ -1,0 +1,20 @@
+name: "Sum Calculator"
+author: "meng zho"
+description: "A GitHub Action to calculate the sum of two numbers."
+icon: "calculator"
+inputs:
+  num1:
+    description: "The first number to sum."
+    required: true
+  num2:
+    description: "The second number to sum."
+    required: true
+outputs:
+  sum:
+    description: "The sum of the two numbers."
+runs:
+  using: "node16"
+  main: "index.js"
+branding:
+  color: "blue"
+  icon: "calculator"

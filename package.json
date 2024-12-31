@@ -1,0 +1,14 @@
+{
+  "name": "sum-calculator-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to calculate the sum of two numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "author": "YourName <yourname@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0"
+  }
+}
