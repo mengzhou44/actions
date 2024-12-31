@@ -1,0 +1,17 @@
+name: "Sum Calculator"
+description: "A GitHub Action to calculate the sum of two numbers."
+inputs:
+  num1:
+    description: "The first number to sum."
+    required: true
+    default: 0
+  num2:
+    description: "The second number to sum."
+    required: true
+    default: 0
+outputs:
+  sum:
+    description: "The sum of the two numbers."
+runs:
+  using: "node16"
+  main: "index.js"

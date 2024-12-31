@@ -8,7 +8,6 @@ on:
 jobs:
   sum_job:
     runs-on: ubuntu-latest
-
     steps:
       # Checkout the repository code to the runner
       - name: Checkout code
@@ -17,7 +16,7 @@ jobs:
       # Call the Sum Calculator Action
       - name: Call Sum Calculator Action
         id: sum_calculator
-        uses: ./index.js   
+        uses:  ./.github/actions/sum-calculator
         with:
           num1: 5
           num2: 7
