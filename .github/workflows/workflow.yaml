@@ -24,3 +24,7 @@ jobs:
       # Output the result of the sum
       - name: Output the sum result
         run: echo "The sum is ${{ steps.sum_calculator.outputs.sum }}"
+
+      # Access the GitHub secret DB_NAME
+      - name: Access DB_NAME secret
+        run: echo "The database name is ${{ secrets.DB_NAME }}"
