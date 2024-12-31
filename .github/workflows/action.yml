@@ -1,24 +1,27 @@
-name: "Sum Calculator"
-author: "meng zho"
-description: "A GitHub Action to calculate the sum of two numbers."
-icon: "calculator"
+name: Sum Calculator Workflow
+
 on:
   push:
     branches:
       - master
-inputs:
-  num1:
-    description: "The first number to sum."
-    required: true
-  num2:
-    description: "The second number to sum."
-    required: true
-outputs:
-  sum:
-    description: "The sum of the two numbers."
-runs:
-  using: "node16"
-  main: "index.js"
-branding:
-  color: "blue"
-  icon: "calculator"
+
+jobs:
+  sum_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository code to the runner
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Call the Sum Calculator Action
+      - name: Call Sum Calculator Action
+        id: sum_calculator
+        uses: ./index.js   
+        with:
+          num1: 5
+          num2: 7
+
+      # Output the result of the sum
+      - name: Output the sum result
+        run: echo "The sum is ${{ steps.sum_calculator.outputs.sum }}"
